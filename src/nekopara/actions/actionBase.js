@@ -35,3 +35,5 @@ class ActionBase {
   
 
 }
+
+export default ActionBase
