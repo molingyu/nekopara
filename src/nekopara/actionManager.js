@@ -1,4 +1,4 @@
-import actions from './actions'
+import { actionList } from './action'
 
 /**
  * 动作管理器
@@ -21,10 +21,11 @@ class ActionManager {
    * @return {Number} 动作的序列。
    */
   addAction(name, param) {
-    let action = actions.get(name)
-    if(action == void 0) {
+    let action, conf = actionList.get(name)
+    if(action == void 0 || conf == void 0) {
       throw new Error()
     }
+    // if()
     return this._actions.push(new action(param))
   }
 
